@@ -1,10 +1,8 @@
 import {createStore,combineReducers} from 'redux';
-import sizes from './Sizes';
-import products from './Products';
+import fonts from './Reducer';
 
 const rootReducers = combineReducers({
-  sizes,
-  products
+  fonts
 })
 const store = createStore(rootReducers);
 
