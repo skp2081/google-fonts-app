@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import WebFont from 'webfontloader';
+import Messages from './Messages';
 
 class Home extends Component {
   constructor() {
@@ -9,6 +10,13 @@ class Home extends Component {
 			inputVal: "",
     }
   }
+
+  // Hijacked the user input and update it on React state.
+	handleInput = (e) => {
+		this.setState({inputVal: e.target.value})
+  }
+  
+  // Web Font Loader Method
   loadFont = (font) => {
     WebFont.load({
       google: {
@@ -16,9 +24,6 @@ class Home extends Component {
       }
     })
   }
-	handleInput = (e) => {
-		this.setState({inputVal: e.target.value})
-	}
   
   render() {
     const {fonts} = this.props;
@@ -27,18 +32,25 @@ class Home extends Component {
     console.log(fontsArr,"fonts size reduced")
     return (
       <div className="main-wrapper">
-          <h1>Google font Browser</h1>
+          <h1>Google fonts Browser App</h1>
           <div className="input-container">
             <input onChange={(e) => this.handleInput(e)} type="text" placeholder="Customize the font sample message"/>
           </div>
           <section className="font-section">
           
           {
-            fontsArr.map((items) => (
+            fontsArr.map((items,i) => (
               <div className="font-wrapper">
                 <p className="font-title">{items.family}</p>
                 <div className="divider" />
-                <p className="user-text"  style={{fontFamily: items.family}}>{this.state.inputVal}</p>
+                <p className="user-text"  style={{fontFamily: items.family}}>
+
+								{/* Conditional Rendering if user input box is empty */}
+
+								{
+									(this.state.inputVal) ? (this.state.inputVal) : Messages[i]
+								}
+								</p>
                 {
                   this.loadFont(items.family)
                 }
