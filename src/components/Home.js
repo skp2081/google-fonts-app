@@ -7,13 +7,22 @@ class Home extends Component {
   constructor() {
 		super();
 		this.state = {
-			inputVal: "",
+      inputVal: "",
+      fontSize: 14,
     }
   }
 
   // Hijacked the user input and update it on React state.
 	handleInput = (e) => {
 		this.setState({inputVal: e.target.value})
+  }
+  
+  // Font Increment & Decrement methods
+	handleInc = () => {
+		this.setState({fontSize: this.state.fontSize+1})
+	}
+	handleDec = () => {
+		this.setState({fontSize: this.state.fontSize-1})
   }
   
   // Web Font Loader Method
@@ -28,7 +37,7 @@ class Home extends Component {
   render() {
     const {fonts} = this.props;
     console.log(fonts,"fonts checking")
-    var fontsArr = fonts.slice(2,18);
+    var fontsArr = fonts.slice(1,17);
     console.log(fontsArr,"fonts size reduced")
     return (
       <div className="main-wrapper">
@@ -37,16 +46,18 @@ class Home extends Component {
             <input onChange={(e) => this.handleInput(e)} type="text" placeholder="Customize the font sample message"/>
           </div>
           <section className="font-section">
-          
           {
             fontsArr.map((items,i) => (
               <div className="font-wrapper">
                 <p className="font-title">{items.family}</p>
+                {/* Font Size Button */}
+                <span className="font-sizer-btn">
+                  <button className="btn1" onClick={() => this.handleInc()}>+</button>
+                  <button className="btn2" onClick={() => this.handleDec()}>-</button>
+                </span>
                 <div className="divider" />
-                <p className="user-text"  style={{fontFamily: items.family}}>
-
+                <p className="user-text"  style={{fontFamily: items.family,fontSize: this.state.fontSize}}>
 								{/* Conditional Rendering if user input box is empty */}
-
 								{
 									(this.state.inputVal) ? (this.state.inputVal) : Messages[i]
 								}
@@ -61,8 +72,7 @@ class Home extends Component {
           <footer>
             <p>Made with &#9829; at <a href="https://altcampus.io" target="_blank">AltCampus</a></p>
           </footer>
-
-        </div>
+      </div>
     )
   }
 }

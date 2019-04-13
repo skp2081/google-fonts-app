@@ -151,6 +151,7 @@ h6 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  letter-spacing: 0.35px;
 }
 .main-wrapper h1 {
   font-size: 22px;
@@ -176,11 +177,38 @@ h6 {
   min-height: 190px;
   margin: 4px 5px;
   font-family: Releway;
+  position: relative;
 }
 .main-wrapper .font-section .font-wrapper .font-title {
   font-size: 16px;
   text-align: left;
   padding-left: 15px;
+}
+.font-sizer-btn {
+  position: absolute;
+  top: -2px;
+  right: 80px;
+}
+button {
+  font-size: 10px;
+  margin-right: 4px;
+
+}
+.btn1 ,.btn2 {
+  padding-top: 1.5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background: rgba(250, 72, 72, 0.87);
+  font-weight: 900;
+}
+.btn2 {
+  background-color:rgba(0,0,0,0.54);
+ color: white;
+
 }
 .main-wrapper .font-section .font-wrapper .divider {
   width: 95%;
