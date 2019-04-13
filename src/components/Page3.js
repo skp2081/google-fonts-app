@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import WebFont from 'webfontloader';
 import Messages from './Messages';
 
- class Page2 extends Component {
+ class Page3 extends Component {
   constructor() {
 		super();
 		this.state = {
@@ -34,7 +34,7 @@ import Messages from './Messages';
   render() {
     const {fonts} = this.props;
     console.log(fonts,"fonts checking")
-    var fontsArr = fonts.slice(18,35);
+    var fontsArr = fonts.slice(36,53);
     console.log(fontsArr,"fonts size reduced")
     return (
       <div className="main-wrapper">
@@ -78,5 +78,5 @@ function mapStateToProps(state){
     fonts: state.fonts
   }
 }
-export default connect(mapStateToProps)(Page2)
+export default connect(mapStateToProps)(Page3)
 
