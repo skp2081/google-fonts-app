@@ -19,12 +19,12 @@ class App extends Component {
     return (
       <Router>
       <div className='container'>
-        <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/Page2' component={Page2} />
-          <Route path='/Page3' component={Page3} />
+          <Route path='/2' component={Page2} />
+          <Route path='/3' component={Page3} />
         </Switch>
+        <Nav />
     </div>
     </Router> 
       

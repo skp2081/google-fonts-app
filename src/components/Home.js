@@ -8,7 +8,7 @@ class Home extends Component {
 		super();
 		this.state = {
       inputVal: "",
-      fontSize: 14,
+      fontSize: 18,
     }
   }
 

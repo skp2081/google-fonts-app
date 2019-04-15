@@ -8,7 +8,7 @@ import Messages from './Messages';
 		super();
 		this.state = {
       inputVal: "",
-      fontSize: 14,
+      fontSize: 18,
     }
   }
   // Hijacked the user input and update it on React state.
@@ -34,11 +34,16 @@ import Messages from './Messages';
   render() {
     const {fonts} = this.props;
     console.log(fonts,"fonts checking")
-    var fontsArr = fonts.slice(18,35);
+    var fontsArr = fonts.slice(18,34);
     console.log(fontsArr,"fonts size reduced")
     return (
       <div className="main-wrapper">
-          <h1>Google fonts Browser App</h1>
+          <h1><button className="theme-btn 1">G</button>
+          <button className="theme-btn 2">o</button>
+          <button className="theme-btn 3">o</button>
+          <button className="theme-btn 4">g</button>
+          <button className="theme-btn 5">l</button>
+          <button className="theme-btn 6">e</button> fonts Browser App</h1>
           <div className="input-container">
             <input onChange={(e) => this.handleInput(e)} type="text" placeholder="Customize the font sample message"/>
           </div>

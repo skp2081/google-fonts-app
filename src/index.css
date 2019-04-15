@@ -229,3 +229,35 @@ button {
   color: #30ba67;
   text-decoration: none;
 }
+/* Styles for Nav */
+.container {
+  position: relative;
+}
+.nav {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 4px;
+  right: 300px;
+  color:#30ba67;
+  /* padding-bottom: 20px; */
+}
+ .links  {
+  text-decoration: none;
+  color:white;
+  padding: 5px 7px;
+  border-radius: 10px;
+  background:#30ba67;
+}
+.active{
+ color:black;
+}
+/* Theme btn styles */
+.theme-btn {
+  background: none;
+  color: rgb(91, 142, 224);
+  font-size: 24px;
+  width: 14px;
+  font-weight: 900;
+}

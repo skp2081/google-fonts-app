@@ -8,7 +8,7 @@ import Messages from './Messages';
 		super();
 		this.state = {
       inputVal: "",
-      fontSize: 14,
+      fontSize: 18,
     }
   }
   // Hijacked the user input and update it on React state.
@@ -34,7 +34,7 @@ import Messages from './Messages';
   render() {
     const {fonts} = this.props;
     console.log(fonts,"fonts checking")
-    var fontsArr = fonts.slice(36,53);
+    var fontsArr = fonts.slice(36,52);
     console.log(fontsArr,"fonts size reduced")
     return (
       <div className="main-wrapper">
