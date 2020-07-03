@@ -1,9 +1,9 @@
 ## Google Fonts Browser App
 ----
-This project is made using react-redux. Fonts are fetched from Google Fonts API.
+### This project is made using react-redux. Fonts are fetched from Google Fonts API.
 ----
 
-[Live](https://gfonts.netlify.com/) : https://gfonts.netlify.com
+You can see [live] here:(https://gfonts.netlify.com/) : https://gfonts.netlify.com
 
 
 ### Features
