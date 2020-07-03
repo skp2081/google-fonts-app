@@ -3,7 +3,7 @@
 ### This project is made using react-redux. Fonts are fetched from Google Fonts API.
 ----
 
-You can see [live] here:(https://gfonts.netlify.com/) : https://gfonts.netlify.com
+You can see here: https://gfonts.netlify.com
 
 
 ### Features
